@@ -3,6 +3,9 @@
  */
 public class Main {
     public static void main(String[] args) {
-        int r = Util.maxNumber(1234567899);
+        System.out.println(Util.maxNumber(123456789));
+        System.out.println(Util.maxNumber(987654321));
+        System.out.println(Util.maxNumber(123));
+        System.out.println(Util.maxNumber(695));
     }
 }

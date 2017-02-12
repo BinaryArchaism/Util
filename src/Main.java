@@ -7,6 +7,7 @@ public class Main {
         System.out.println(Util.maxNumber(923829348));
         System.out.println(Util.sumNumber(123456789));
         System.out.println(Util.minNumber(123456789));
-        System.out.println(Util.multiplicationNumber(123456789));
+        System.out.println(Util.multiplicationNumber(1241241));
+
     }
 }

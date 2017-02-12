@@ -19,12 +19,14 @@ public class Util {
         max = max>h? max:h; max = max>t? max:t;
         return max;
     }
+
     public static int factorial(int n) {
         int result;
         if (n == 1) return 1;
         result = factorial(n - 1) * n;
         return result;
     }
+
     public static int minNumber(int number){    /**Не доделано, когда число меньше 9-ти знаков, выдает ноль, даже если его в числе нет.**/
         int a, b, c, d, e , f, g, h, t;
         int min;
@@ -55,6 +57,7 @@ public class Util {
         t = number%10;
         return (a+b+c+d+e+f+g+h+t);
     }
+
     public static int multiplicationNumber(int number){
         int a, b, c, d, e , f, g, h, t;      /**Не доделано, надо убрать из расчета ноль**/
         a = number/100000000;

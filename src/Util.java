@@ -45,16 +45,10 @@ public class Util {
     }
 
     public static boolean searchNumeral(int number, int n){
-        int a, b, c, d, e , f, g, h, t;
-        a = number/100000000;
-        b = number/10000000%10;
-        c = number/1000000%10;
-        d = number/100000%10;
-        e = number/10000%10;
-        f = number/1000%10;
-        g = number/100%10;
-        h = number/10%10;
-        t = number%10;
+        while (number>0) {
+            if (number%10 == n) return true;
+            number /= 10;
+        }
         return true;
     }
 }

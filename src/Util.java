@@ -2,53 +2,50 @@
  * Created by serio on 11.02.2017.
  */
 public class Util {
-    public static int maxNumber(int number) {
-        int max = -1;
-        do {
-            max = number%10>max? number%10:max;
-            number/=10;
-        } while (number>0);
-        return max;
+
+    static final int Max = 0;
+
+    public static int maxNumber(int number, int max) {
+        if (number == 0) return max;
+        if (number % 10 > max) return maxNumber(number / 10, number % 10);
+        else return maxNumber(number / 10, max);
     }
 
     public static int factorial(int n) {
-        int result;
+        if (n == 0) return 1;
         if (n == 1) return 1;
-        result = factorial(n - 1) * n;
-        return result;
+        return factorial(n - 1) * n;
     }
 
-    public static int minNumber(int number){
-        int min = 10;
-        while (number>0) {
-            if (number%10<min) min = number%10;
-            number /= 10;
-        }
-        return min;
-    }
-    public static int sumNumber(int number){
-        int sum = 0;
-        while (number>0) {
-            sum = number%10 + sum;
-            number /= 10;
-        }
-        return sum;
+    static final int Min = 10;
+
+    public static int minNumber(int number, int min){
+        if (number == 0) return min;
+        if (number % 10 < min) return minNumber(number / 10, number % 10);
+        else return minNumber(number / 10, min);
     }
 
-    public static int multiplicationNumber(int number){
-        int mult = 1;
-        while (number>0) {
-            if (mult!=0) mult = number%10 * mult;
-            number /= 10;
-        }
-        return mult;
+    static final int Sum = 0;
+
+    public static int sumNumber(int number, int sum){
+        if (number == 0) return sum;
+        return sumNumber(number / 10, sum + number % 10);
+    }
+
+    static final int Mult = 1;
+
+    public static int multiplicationNumber(int number, int mult){
+        if (number == 0) return mult;
+        return multiplicationNumber(number / 10, mult * (number % 10));
     }
 
     public static boolean searchNumeral(int number, int n){
-        while (number>0) {
-            if (number%10 == n) return true;
-            number /= 10;
-        }
-        return true;
+        if (number % 10 == n) return true;
+        if (number == 0) return false;
+        return searchNumeral(number / 10, n);
     }
+
+    
+
+
 }

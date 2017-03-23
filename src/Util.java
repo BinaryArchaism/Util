@@ -44,8 +44,4 @@ public class Util {
         if (number == 0) return false;
         return searchNumeral(number / 10, n);
     }
-
-    
-
-
 }

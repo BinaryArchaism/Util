@@ -44,4 +44,23 @@ public class Util {
         if (number == 0) return false;
         return searchNumeral(number / 10, n);
     }
+    public static int[] inArr(int[] arr, int n, int place){
+        place--;
+        int t1;
+        int t = arr[place];
+        for (int i = place; i < arr.length-1; i++) {
+            t1 = arr[i+1];
+            arr[i+1] = t;
+            t = t1;
+        }
+        arr[place] = n;
+        return arr;
+    }
+    public static int[] outArr(int[] arr, int place) {
+
+        for (int i = place; i < arr.length-1; i++) {
+            arr[i-1] = arr[i];
+        }
+        return arr;
+    }
 }

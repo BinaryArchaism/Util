@@ -9,6 +9,29 @@ public class Main {
         System.out.println(Util.sumNumber(123456789, Util.Sum));
         System.out.println(Util.multiplicationNumber(1045, Util.Mult));
         System.out.println(Util.searchNumeral(432431542, 1));
+        int[] arr1 = new int[20];
+        int[] arr = new int[20];
+        for (int i = 0; i < 19; i++) {
+            arr[i] = (int)(Math.random()*100);
 
+        }
+        Util.inArr(arr, 120, 4);
+        for (int i = 0; i <20; i++) {
+            System.out.print(arr[i]+", ");
+
+        }
+        System.out.println("");
+        for (int i = 0; i < 20; i++) {
+            arr1[i] = (int) (Math.random() * 100);
+        }
+        arr1[4] = 9;
+        for (int i = 0; i <20; i++) {
+            System.out.print(arr1[i] + ", ");
+        }
+        Util.outArr(arr1, 5);
+        System.out.println("");
+        for (int i = 0; i <20; i++) {
+            System.out.print(arr1[i] + ", ");
+        }
     }
 }

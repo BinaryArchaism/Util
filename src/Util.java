@@ -63,4 +63,19 @@ public class Util {
         }
         return arr;
     }
+
+    public static int sub( int a, int b) {
+        if (b == 0) return a;
+        return sub(a-1, b-1);
+    }
+
+    public static int div1( int a, int b, int c, int d ) {
+        if (d == 0) return c;
+        return div1(a,b,c+1, sub(d, a));
+    }
+
+    public static  int mod( int a, int b){
+        if (a < b) return a;
+        return mod(sub(a,b), b);
+    }
 }

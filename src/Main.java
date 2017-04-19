@@ -33,5 +33,8 @@ public class Main {
         for (int i = 0; i <20; i++) {
             System.out.print(arr1[i] + ", ");
         }
+        System.out.println(Util.sub(12,2));
+        System.out.println(Util.div1(4,12,0,12));
+        System.out.println(Util.mod(45, 10));
     }
 }

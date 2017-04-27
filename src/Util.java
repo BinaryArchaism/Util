@@ -78,4 +78,9 @@ public class Util {
         if (a < b) return a;
         return mod(sub(a,b), b);
     }
+
+    public static int swap1(int a, int b, int c, int d) {
+        if (a == d && b == c) return a;
+        return swap1(a-1, b+1, c, d);
+    }
 }

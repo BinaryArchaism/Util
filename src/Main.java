@@ -36,5 +36,10 @@ public class Main {
         System.out.println(Util.sub(12,2));
         System.out.println(Util.div1(4,12,0,12));
         System.out.println(Util.mod(45, 10));
+        System.out.println("");
+        int a = 9; int b = 7;
+        System.out.println(a+" "+b);
+        a = Util.swap1(a, b, a, b);
+        System.out.println(a+" "+b);
     }
 }

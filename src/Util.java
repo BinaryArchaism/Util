@@ -83,4 +83,71 @@ public class Util {
         if (a == d && b == c) return a;
         return swap1(a-1, b+1, c, d);
     }
+
+    public static void leftArr( int arr[]) {
+        int t = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            arr[i-1] = arr[i];
+        }
+        arr[arr.length - 1] = t;
+    }
+
+    public static int[] leftKArr (int a[], int k) {
+        int tmp[]= new int[a.length];
+        for (int i = 0; i < a.length; i++) {
+            tmp[i] = a[i];
+        }
+        for (int i = 0; i < k; i++) {
+            leftArr(tmp);
+        }
+        return tmp;
+    }
+
+    public static void printArray( int a[]){
+        for (int i = 0; i < a.length; i++) {
+            System.out.print(a[i] + " | ");
+        }
+        System.out.println(" ");
+    }
+
+    public static void turn(int arr[], int x, int y) {
+        while (x < y) {
+            int t = arr[x];
+            arr[x] = arr[y];
+            arr[y] = t;
+            x++;
+            y--;
+        }
+    }
+    public static void sort1(int a[]){
+        int n = 0, p = 0;
+        for (int i = 0; i < a.length - 1; i++) {
+            if (a[n] < a[p+1]) {
+                int t = a[n];
+                a[n] = a[p+1];
+                a[p+1] = t;
+            }
+            p++;
+            if (a.length - i == 1) {
+                i = 0;
+                n++;
+                p = n;
+            }
+        }
+    }
+
+    public static void bubble(int a[]) {
+        boolean No = true;
+        for (int i = 0; i < a.length-1; i++) {
+            for (int j = 0; j < a.length - i - 1; j++ ) {
+                if (a[j] > a[j+1]) {
+                    int p = a[j];
+                    a[j] = a[j+1];
+                    a[j+1] = p;
+                    No = false;
+                }
+            }
+            if (No) break;
+        }
+    }
 }

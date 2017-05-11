@@ -43,7 +43,7 @@ public class Main {
 //        System.out.println(a+" "+b);
         int a[] = {242,7457,2345,468,246,368,2570,13546,65468,54684654,65432,1321,354,6846,213,546,8465,498,4654};
         Util.printArray(a);
-        Util.bubble(a);
+        Util.insert(a);
         System.out.println("");
         Util.printArray(a);
     }
